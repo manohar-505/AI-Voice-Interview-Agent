@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Interview</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <h1>AI Voice Interview Agent</h1>
+
+    <h2>Question 1</h2>
+
+    <p>{{ question }}</p>
+
+    <form method="POST">
+
+        <textarea
+id="answer"
+name="answer"
+rows="5"
+cols="50"
+placeholder="Type your answer here"></textarea>
+
+<br><br>
+
+<button type="button" onclick="startSpeech()">
+🎤 Start Recording
+</button>
+        <br><br>
+
+        <button type="submit">
+            Submit Answer
+        </button>
+
+    </form>
+
+    {% if score is not none %}
+
+        <h2>Score: {{ score }}/10</h2>
+
+    {% endif %}
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Interview Completed</title>
+</head>
+<body>
+
+    <h1>Interview Completed 🎉</h1>
+
+    <h2>Results</h2>
+
+    {% for item in results %}
+
+        <p><b>Question:</b> {{ item.question }}</p>
+
+        <p><b>Answer:</b> {{ item.answer }}</p>
+
+        <p><b>Score:</b> {{ item.score }}/10</p>
+
+        <hr>
+
+    {% endfor %}
+
+</body>
+</html>
